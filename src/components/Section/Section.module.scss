@@ -1,0 +1,15 @@
+.container {
+  overflow: hidden;
+  padding-bottom: 2rem;
+  .title {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+  .swiper {
+    display: flex;
+    // overflow: hidden;
+  }
+  .slide {
+    width: 300px;
+  }
+}

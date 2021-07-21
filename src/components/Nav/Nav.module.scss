@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65x;
+  color: #ffffff;
+  .firstHalf {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .logo {
+      height: 65px;
+    }
+    .navMenu a {
+      color: #ffffff;
+      font-size: 1rem;
+      margin: 0 5px;
+    }
+    .active {
+      font-weight: bolder;
+    }
+    .selected {
+      font-weight: bold;
+    }
+  }
+  .profileNav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & > * {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 10px;
+      width: 300px;
+      outline: none;
+      background-color: black;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      cursor: initial;
+    }
+    .search {
+      font-size: 0.9rem;
+    }
+    .bell {
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+    .profile {
+      height: 30px;
+      margin-right: 3px;
+    }
+    .arrow {
+      margin-left: 0;
+      font-size: 1.5rem;
+    }
+  }
+}
