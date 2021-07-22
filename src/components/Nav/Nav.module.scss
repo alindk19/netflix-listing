@@ -2,14 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 65x;
+  height: 65px;
   color: #ffffff;
+  position: relative;
+  z-index: 100;
+  width: 95%;
+  margin: auto;
   .firstHalf {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     .logo {
-      height: 65px;
+      height: 25px;
+      margin-right: 2rem;
     }
     .navMenu a {
       color: #ffffff;

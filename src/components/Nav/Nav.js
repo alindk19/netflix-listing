@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Nav.module.scss";
-import NetflixIcon from "./netflix.png";
 import { FaSearch, FaBell } from "react-icons/fa";
 import { MdArrowDropDown } from "react-icons/md";
 import ProfileIcon from "./profile.jpg";
@@ -11,7 +10,11 @@ const Nav = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.firstHalf}>
-        <img className={styles.logo} src={NetflixIcon} alt="icon" />
+        <img
+          className={styles.logo}
+          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+          alt="icon"
+        />
         <div className={styles.navMenu}>
           <NavLink activeClassName={styles.active} exact to="/">
             Home
