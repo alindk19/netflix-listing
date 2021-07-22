@@ -1,17 +1,6 @@
 import axios from "axios";
 import { BASE_API_URL, API_KEY } from "../../utils/constants";
-import { TRENDING, GET_MOVIES_WITH_GENRES } from "./themoviedb.types";
-
-export const getTrending = () => async (dispatch) => {
-  const res = await axios.get(
-    `${BASE_API_URL}/trending/all/day?api_key=${API_KEY}`
-  );
-  dispatch({
-    type: TRENDING,
-    payload: res.data || [],
-  });
-  return res.data;
-};
+import { GET_MOVIES_WITH_GENRES } from "./themoviedb.types";
 
 export const getMoviesWithGenres = (id) => async (dispatch) => {
   const res = await axios.get(
