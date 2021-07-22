@@ -1,10 +1,16 @@
+import { useState } from "react";
 import styles from "./Card.module.scss";
 
 const Card = ({ imageUrl, movieTitle }) => {
+  const [show, setShow] = useState(false);
   return (
-    <div className={styles.cardWrapper}>
+    <div
+      onMouseOver={() => setShow(true)}
+      onMouseOut={() => setShow(false)}
+      className={styles.cardWrapper}
+    >
       <img src={imageUrl} alt="" />
-      {/* <h3>{movieTitle}</h3> */}
+      {show && <p>{movieTitle}</p>}
     </div>
   );
 };

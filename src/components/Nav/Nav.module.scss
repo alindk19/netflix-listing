@@ -20,6 +20,9 @@
       color: #ffffff;
       font-size: 1rem;
       margin: 0 5px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     .active {
       font-weight: bolder;
@@ -46,9 +49,15 @@
       border: 1px solid #ffffff;
       color: #ffffff;
       cursor: initial;
+      &::placeholder {
+        color: #ffffff;
+      }
     }
     .search {
       font-size: 0.9rem;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     .bell {
       color: #ffffff;

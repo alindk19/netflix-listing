@@ -13,14 +13,13 @@ export const getTrending = () => async (dispatch) => {
   return res.data;
 };
 
-export const getMoviesWithGenres = (id, genre) => async (dispatch) => {
+export const getMoviesWithGenres = (id) => async (dispatch) => {
   const res = await axios.get(
     `${BASE_API_URL}/discover/movie?api_key=${API_KEY}&with_genres=${id}`
   );
   dispatch({
     type: GET_MOVIES_WITH_GENRES,
     payload: res.data || [],
-    genre: genre,
   });
   return res.data;
 };

@@ -1,7 +1,6 @@
 import styles from "./Banner.module.scss";
 import { connect } from "react-redux";
 import { useEffect, useState } from "react";
-import "./banner.css";
 
 const Banner = ({ movieList }) => {
   const [movie, setMovie] = useState([]);
@@ -22,10 +21,11 @@ const Banner = ({ movieList }) => {
         backgroundPosition: "center center",
       }}
     >
-      <div className="banner__contents">
-        <h1 className="banner__title">
+      <div className={styles.content}>
+        <h1 className={styles.title}>
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
+        <h3 className={styles.overview}>{movie?.overview}</h3>
       </div>
       <div className={styles.cta}>
         <button>Play</button>
@@ -38,5 +38,4 @@ const Banner = ({ movieList }) => {
 const mapStateToProps = (state) => ({
   movieList: state.reducer,
 });
-
 export default connect(mapStateToProps)(Banner);

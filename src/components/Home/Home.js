@@ -19,9 +19,11 @@ const Home = () => {
   return (
     <div className={styles.HomeWrapper}>
       <Banner />
-      {data?.map((item, index) => (
-        <Section key={item.id} index={index} id={item.id} title={item.name} />
-      ))}
+      <div className={styles.section}>
+        {data?.map((item, index) => (
+          <Section key={item.id} index={index} id={item.id} title={item.name} />
+        ))}
+      </div>
     </div>
   );
 };

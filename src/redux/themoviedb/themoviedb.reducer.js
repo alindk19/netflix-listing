@@ -1,4 +1,4 @@
-import { GET_MOVIES_WITH_GENRES } from "./themoviedb.types";
+import { GET_MOVIES_WITH_GENRES, TRENDING } from "./themoviedb.types";
 
 const initialState = {
   moviesList: [],

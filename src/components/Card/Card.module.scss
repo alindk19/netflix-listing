@@ -3,13 +3,24 @@
     object-fit: cover;
     width: 250px;
     max-height: 150px;
-    transition: transform 450ms;
   }
+  transition: transform 450ms;
+  color: white;
+  position: relative;
 
-  img:hover {
+  &:hover {
     transform: scale(1.5);
     opacity: 1;
     cursor: pointer;
     z-index: 100;
+  }
+
+  p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 6px black;
   }
 }
